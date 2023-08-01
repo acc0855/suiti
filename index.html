@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Suits for Sale</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background color for the body */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #000; /* Black background color for the container */
+      border-radius: 10px; /* Rounded corners for a friendly look */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to lift the container */
+      position: relative; /* Add position relative for absolute positioning of the shimmer effect */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 60px; /* Larger font size for a more prominent title */
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff; /* White color for the text */
+      position: relative;
+      animation: titleAnimation 8s linear infinite;
+    }
+
+    @keyframes titleAnimation {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Apply the same animation to the developer information */
+    .developer-info {
+      font-size: 24px;
+      color: #fff; /* White color for the text */
+      margin-top: 10px;
+      font-weight: bold;
+      position: relative;
+      animation: developerAnimation 8s linear infinite;
+    }
+
+    @keyframes developerAnimation {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Apply pulsating animation to developer information on hover */
+    .developer-info:hover {
+      animation: pulsate 1s ease-in-out infinite;
+    }
+
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Apply background color change to developer information on hover */
+    .developer-info:hover {
+      background-color: #ff8c00; /* Orange background on hover */
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #1e90ff; /* Bright blue color for the horizontal rule */
+      margin: 30px 0;
+    }
+
+    h2 {
+      color: #008000; /* Green color for heading */
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .image-container {
+      width: calc(50% - 20px); /* Two images per row in landscape */
+      margin-bottom: 40px;
+      text-align: center;
+      border: 2px solid #ff0000; /* Red color for border */
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #000; /* Black background color for the image container */
+      transition: background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-container:hover {
+      background-color: #ff8c00; /* Orange background on hover */
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animations */
+    .image-container:hover .overlay {
+      opacity: 1;
+      animation: spinAnimation 2s infinite;
+    }
+
+    @keyframes spinAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Black background color with 70% opacity */
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay-text {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Landscape styles */
+    @media (min-aspect-ratio: 16/9) {
+      .container {
+        max-width: 1200px; /* Increase the container width for landscape layout */
+      }
+
+      .image-container {
+        width: calc(25% - 20px); /* Four images per row in landscape */
+      }
+    }
+
+    /* Animation for border color change on hover */
+    @keyframes borderAnimation {
+      0% {
+        border-color: #ff0000; /* Initial border color (red) */
+      }
+      100% {
+        border-color: #fff; /* Final border color (white) */
+      }
+    }
+
+    /* Apply the animation to the image containers */
+    .image-container {
+      animation: borderAnimation 1s infinite alternate; /* Apply the animation with a 1s duration, infinite repetition, and alternate direction */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>DALJEET <span style="color: #00f;">SUITS</span> WEBSITE</h1>
+    <hr>
+    <h2>ALL SUITS FOR SALE</h2>
+    <div class="image-row">
+      <!-- First four images -->
+      <div class="image-container">
+        <img src="https://m.media-amazon.com/images/I/51u06w+hVTS._AC_UX679_.jpg" alt="T-shirts for kids"
+          height="300">
+        <div class="overlay">
+          <div class="overlay-text">SHIRTS FOR KIDS $50</div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://i.etsystatic.com/6254294/r/il/31c7d2/2411196401/il_fullxfull.2411196401_sdpd.jpg" alt="T-shirts for kids"
+          height="300">
+        <div class="overlay">
+          <div class="overlay-text">SHIRTS FOR KIDS $40</div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://muselot.in/cdn/shop/collections/plain-t-shirt-man.jpg?v=1631038116" alt="T-shirt for men" height="300">
+        <div class="overlay">
+          <div class="overlay-text">SHIRT FOR MEN $20</div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://media.istockphoto.com/id/488160041/photo/mens-shirt.jpg?s=612x612&w=0&k=20&c=xVZjKAUJecIpYc_fKRz_EB8HuRmXCOOPOtZ-ST6eFvQ="
+          alt="T-shirt for men" height="300">
+        <div class="overlay">
+          <div class="overlay-text">SHIRT FOR MEN $60</div>
+        </div>
+      </div>
+
+      <!-- Additional eleven images (including the new space) -->
+      <div class="image-container">
+        <img src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C61eQOvdhHmL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png" alt="" height="300">
+        <div class="overlay">
+          <div class="overlay-text">SHIRT FOR MEN $10</div>
+        </div>
+      </div>
+      <!-- ... (repeat for IMAGE_URL_2 to IMAGE_URL_10) ... -->
+
+      <!-- New image -->
+      <div class="image-container">
+        <img src="https://m.media-amazon.com/images/I/61kjXvBKSZL._AC_UX679_.jpg" alt="" height="300">
+        <div class="overlay">
+          <div class="overlay-text">SHIRT FOR MEN $60</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <!-- Apply the developer information animation -->
+    <p class="developer-info">DEVELOPER INFORMATION ==> NAME: PARAMPREET SINGH MARVA</p>
+    <p class="developer-info">DEVELOPER INFORMATION ==> AGE: 15</p>
+    <p class="developer-info">DEVELOPER INFORMATION ==> FROM: ITALY</p>
+  </div>
+</body>
+
+</html>
